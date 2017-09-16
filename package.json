@@ -1,0 +1,46 @@
+{
+  "name": "proper-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "nodemonConfig": {
+    "ignore": ["! dist/*"],
+    "delay": "2000"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev:build": "yarn run clean && webpack -w",
+    "dev": "cross-env NODE_ENV=development  nodemon dist/index-bundle.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.17.2",
+    "compression": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^5.0.5",
+    "express-validation": "^1.0.2",
+    "helmet": "^3.8.1",
+    "joi": "^10.6.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.10",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^8.1.0",
+    "express": "latest"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.37",
+    "@types/joi": "^10.4.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "nodemon": "^1.12.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
